@@ -3,7 +3,9 @@
   "version": "0.2.1",
   "description": "AlaiDesign — 高能量 Svelte 5 组件库",
   "type": "module",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
@@ -70,6 +72,7 @@
   },
   "devDependencies": {
     "@sveltejs/package": "^3.0.3",
+    "react-native": "^0.88.1",
     "svelte": "^5.46.1",
     "svelte-check": "^4.0.0",
     "svelte-preprocess": "^6.0.0",

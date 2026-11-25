@@ -39,6 +39,8 @@ class AluButton extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(t.radius),
         onTap: disabled ? null : onTap,
+        child: Opacity(
+        opacity: disabled ? 0.5 : 1,
         child: Container(
           height: height,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -46,13 +48,13 @@ class AluButton extends StatelessWidget {
             border: Border.all(color: border, width: variant == AluButtonVariant.outline ? 1 : 0),
             borderRadius: BorderRadius.circular(t.radius),
           ),
-          opacity: disabled ? 0.5 : 1,
           alignment: Alignment.center,
           child: DefaultTextStyle(
             style: TextStyle(color: fg, fontSize: 14, fontWeight: FontWeight.w500),
             child: child,
           ),
         ),
+      ),
       ),
     );
   }

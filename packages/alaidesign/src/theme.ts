@@ -13,6 +13,7 @@ export interface ThemeTokens {
   colorWarning: string;
   colorDestructive: string;
   colorInfo: string;
+  colorInput: string;
   fontBody: string;
   radius: number;
   spaceBase: number;
@@ -31,6 +32,7 @@ export const themeLight: ThemeTokens = {
   colorWarning: '#F5A623',
   colorDestructive: '#E5484D',
   colorInfo: '#0052D9',
+  colorInput: '#FFFFFF',
   fontBody: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
   radius: 6,
   spaceBase: 8,
@@ -49,6 +51,7 @@ export const themeDark: ThemeTokens = {
   colorWarning: '#F5A623',
   colorDestructive: '#E5484D',
   colorInfo: '#366EF4',
+  colorInput: '#1E2129',
   fontBody: themeLight.fontBody,
   radius: 6,
   spaceBase: 8,

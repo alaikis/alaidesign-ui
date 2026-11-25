@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, Text, Pressable, TextInput } from 'react-native';
 import type { ThemeTokens, ThemeMode } from '../../src/theme';
 import { themeFor } from '../../src/theme';
@@ -68,7 +69,7 @@ export interface BadgeProps {
 }
 export function Badge({ variant = 'default', mode = 'light', children }: BadgeProps) {
   const t = themeFor(mode);
-  const map: Record<BadgeProps['variant'], { bg: string; fg: string }> = {
+  const map: Record<'default' | 'secondary' | 'destructive' | 'success' | 'warning' | 'outline', { bg: string; fg: string }> = {
     default: { bg: t.colorPrimary, fg: t.colorPrimaryForeground },
     secondary: { bg: t.colorMuted, fg: t.colorMutedForeground },
     destructive: { bg: t.colorDestructive, fg: t.colorPrimaryForeground },
@@ -136,7 +137,7 @@ export function Input({ placeholder, value, onChange, disabled, mode = 'light' }
       placeholderTextColor={t.colorMutedForeground}
       value={value}
       onChangeText={onChange}
-      disabled={disabled}
+      editable={!disabled}
       style={{
         height: 36,
         borderRadius: 8,
