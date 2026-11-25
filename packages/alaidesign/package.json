@@ -1,0 +1,24 @@
+{
+  "name": "@alaikis/alaidesign-multi",
+  "version": "0.3.0",
+  "description": "AlaiDesign 多平台组件库统一入口（逻辑单包 @alaikis/alaidesign-multi，按平台物理子包发布：flutter/swift/rn/expo/uniappx）",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": "./src/index.js",
+    "./web": "./src/index.js",
+    "./rn": "./platforms/rn/index.js",
+    "./expo": "./platforms/expo/index.js",
+    "./uniappx": "./platforms/uniappx/index.js",
+    "./flutter": "./platforms/flutter/README.md",
+    "./swift": "./platforms/swift/README.md"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": ["src", "platforms/rn", "platforms/expo", "platforms/uniappx", "platforms/flutter", "platforms/swift"],
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  }
+}
