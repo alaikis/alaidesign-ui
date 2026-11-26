@@ -71,6 +71,7 @@
     "tailwind-variants": "^3.2.2"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.159",
     "@sveltejs/package": "^3.0.3",
     "@sveltejs/vite-plugin-svelte": "^7.3.2",
     "@tailwindcss/cli": "^4.3.5",

@@ -1,6 +1,6 @@
 {
   "name": "@alaikis/alaidesign-ui",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "AlaiDesign Web Components core (framework-agnostic, compiled from Svelte source, self-contained Tailwind CSS)",
   "type": "module",
   "main": "./dist/index.js",
@@ -18,7 +18,11 @@
     "./tokens.css": "./dist/tokens.css",
     "./styles.css": "./dist/styles.css"
   },
-  "files": ["dist", "src", "scripts"],
+  "files": [
+    "dist",
+    "src",
+    "scripts"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
