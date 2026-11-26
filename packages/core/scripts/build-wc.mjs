@@ -146,18 +146,12 @@ defineElement(${JSON.stringify(tag)}, Comp, { props: ${JSON.stringify(props)}, e
 
 for (const f of atomicFiles) { const r = relRender(uiRoot, f).replace(/\.svelte$/, ''); makeAdapter(r, f, tagByRel[r]); }
 for (const f of wcFiles) { const r = 'wc/' + path.basename(f).replace(/\.wc\.svelte$/, ''); makeAdapter(r, f, wcTag[f]); }
-// 离线图标集初始化（无 tag，纯副作用入口，barrel 首先导入）
-entry['runtime/icons'] = path.resolve(coreRoot, 'src/runtime/icons.js');
 
 await build({
   root: repoRoot,
   plugins: [svelte()],
   resolve: {
-    alias: [
-      // 图标离线化：'@iconify/svelte' → OfflineIcon（配合 runtime/icons 注册 lucide 集合）
-      { find: /^@iconify\/svelte$/, replacement: '@iconify/svelte/dist/OfflineIcon.svelte' },
-      { find: '$app/environment', replacement: path.resolve(coreRoot, 'src/app-stubs/environment.ts') },
-    ],
+    alias: { '$app/environment': path.resolve(coreRoot, 'src/app-stubs/environment.ts') },
   },
   build: {
     outDir,
@@ -172,7 +166,7 @@ await build({
 
 // barrel + 类型
 const keys = Object.keys(entry);
-const orderedKeys = ['runtime/icons', ...keys.filter((k) => k !== 'runtime/icons')];
+const orderedKeys = keys;
 const barrel = ['// 自动生成：import 本包即注册全部 AlaiDesign 自定义元素。', ...orderedKeys.map((k) => `import './components/${k}.js';`), '', 'export {};', ''].join('\n');
 fs.writeFileSync(path.resolve(coreRoot, 'dist/index.js'), barrel, 'utf8');
 const tags = keys.map((k) => tagOfKey[k]).filter(Boolean).sort();

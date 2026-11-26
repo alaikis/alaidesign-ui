@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IconComponent from "@iconify/svelte";
+	import IconComponent from '../../internal/icon.svelte';
 	import { Button } from "./button/index";
 
 	interface Props {

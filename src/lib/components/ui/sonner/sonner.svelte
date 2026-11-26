@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IconComponent from "@iconify/svelte";
+	import IconComponent from '../../../internal/icon.svelte';
 	let { type = "info", description = "", duration = 3000, onDismiss }: {
 		type?: "info" | "success" | "error" | "warning";
 		description?: string;

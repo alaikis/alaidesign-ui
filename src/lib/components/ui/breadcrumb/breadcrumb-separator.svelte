@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { cn } from "../../../internal/util/cn";
-	import IconComponent from "@iconify/svelte";
+	import IconComponent from '../../../internal/icon.svelte';
 
 	let {
 		separator = "lucide:chevron-right",

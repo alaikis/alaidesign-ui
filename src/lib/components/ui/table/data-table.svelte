@@ -9,7 +9,7 @@
     } from "../table/index";
     import { Pagination } from "../pagination/index";
     import { Skeleton } from "../skeleton/index";
-    import IconComponent from "@iconify/svelte";
+    import IconComponent from '../../../internal/icon.svelte';
     import { cn } from "../../../internal/util/cn";
 
     // Column definition type (without generic to avoid parsing issues)

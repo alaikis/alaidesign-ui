@@ -1,6 +1,6 @@
 {
   "name": "@alaikis/alaidesign-ui",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "AlaiDesign Web Components core (framework-agnostic, compiled from Svelte source, self-contained Tailwind CSS)",
   "type": "module",
   "main": "./dist/index.js",
