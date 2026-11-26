@@ -1,12 +1,15 @@
 {
   "name": "@alaikis/alaidesign-react",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "AlaiDesign React wrapper (Web Components)",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -23,5 +26,8 @@
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@alaikis/alaidesign-ui": "^0.3.0"
   }
 }

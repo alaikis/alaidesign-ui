@@ -1,4 +1,6 @@
 import React, { forwardRef, useRef, useEffect } from 'react';
+// 导入即注册全部 AlaiDesign 自定义元素（alu-*）
+import '@alaikis/alaidesign-ui';
 
 // React wrapper 基础：将 AlaiDesign Web Components 包装为 React 组件。
 // 事件桥：onXxx props → useRef + useEffect addEventListener（零额外依赖）。

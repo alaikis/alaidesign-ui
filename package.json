@@ -62,7 +62,7 @@
     "svelte": "^5.0.0"
   },
   "dependencies": {
-    "@iconify/svelte": "^5.1.0",
+    "@iconify/svelte": "^5.2.4",
     "@internationalized/date": "^3.12.0",
     "@lucide/svelte": "^1.33.0",
     "bits-ui": "^2.16.3",
@@ -72,11 +72,16 @@
   },
   "devDependencies": {
     "@sveltejs/package": "^3.0.3",
+    "@sveltejs/vite-plugin-svelte": "^7.3.2",
+    "@tailwindcss/cli": "^4.3.5",
+    "playwright": "^1.65.1",
     "react-native": "^0.88.1",
-    "svelte": "^5.46.1",
+    "svelte": "^5.59.1",
     "svelte-check": "^4.0.0",
     "svelte-preprocess": "^6.0.0",
+    "tailwindcss": "^4.3.5",
     "typescript": "^5.9.3",
+    "vite": "^8.3.8",
     "vitest": "^4.0.0"
   }
 }

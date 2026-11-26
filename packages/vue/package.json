@@ -1,12 +1,15 @@
 {
   "name": "@alaikis/alaidesign-vue",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "AlaiDesign Vue wrapper (Web Components)",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -19,5 +22,8 @@
   "devDependencies": {
     "typescript": "^5.9.3",
     "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@alaikis/alaidesign-ui": "^0.3.0"
   }
 }

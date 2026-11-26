@@ -12,6 +12,7 @@
 			size: {
 				default: "gap-4 p-4",
 				sm: "gap-2.5 px-4 py-3",
+				lg: "gap-4 p-6",
 			},
 		},
 		defaultVariants: {

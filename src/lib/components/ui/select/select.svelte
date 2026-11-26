@@ -9,8 +9,9 @@
 		onValueChange?: (value: string) => void;
 		disabled?: boolean;
 		placeholder?: string;
+		options?: Array<{ value: string; label: string; disabled?: boolean }>;
 		class?: string;
-		children: Snippet;
+		children?: Snippet;
 	}
 
 	let {
@@ -18,6 +19,7 @@
 		onValueChange,
 		disabled,
 		placeholder,
+		options = [],
 		class: className,
 		children,
 		...restProps
@@ -45,6 +47,9 @@
 	{#if placeholder}
 		<option value="" disabled selected>{placeholder}</option>
 	{/if}
+	{#each options as opt (opt.value)}
+		<option value={opt.value} disabled={opt.disabled}>{opt.label}</option>
+	{/each}
 	{@render children?.()}
 	</select>
 	<ChevronDownIcon class="absolute right-2.5 top-1/2 -translate-y-1/2 h-4 w-4 opacity-50 pointer-events-none" />

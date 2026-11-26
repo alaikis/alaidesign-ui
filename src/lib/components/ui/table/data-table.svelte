@@ -106,6 +106,14 @@
         return row[column.key];
     }
 
+    // 处理行点击（容器委托：TableRow 的 onclick 经 spread 不一定挂载为 DOM 事件）
+    function handleContainerClick(e: MouseEvent) {
+        const tr = (e.target as HTMLElement)?.closest?.('tr[data-row-index]') as HTMLElement | null;
+        if (!tr) return;
+        const idx = Number(tr.getAttribute('data-row-index'));
+        if (!Number.isNaN(idx) && data[idx]) handleRowClick(data[idx]);
+    }
+
     // 处理行点击
     function handleRowClick(row: any) {
         onRowClick?.(row);
@@ -124,7 +132,7 @@
     }
 </script>
 
-<div class={cn("data-table-container", className)}>
+<div class={cn("data-table-container", className)} onclick={handleContainerClick}>
     <!-- 表格区域 -->
     <div
         class="rounded-lg bg-card border border-border overflow-hidden"
@@ -221,7 +229,7 @@
                         {#each data as item, index}
                             <TableRow
                                 class="border-none hover:bg-muted/20 transition-colors cursor-pointer"
-                                onclick={() => handleRowClick(item)}
+                                data-row-index={index}
                             >
                                 {#each columns as column}
                                     <TableCell

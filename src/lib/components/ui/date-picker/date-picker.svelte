@@ -44,7 +44,7 @@
 			>
 				{#snippet children({ segments })}
 					<CalendarIcon class="h-4 w-4 opacity-50" />
-					{#each segments as { part, value: segmentValue } (part)}
+					{#each segments as { part, value: segmentValue }, i (`${part}-${i}`)}
 						<DatePickerPrimitive.Segment
 							{part}
 							class="rounded px-0.5 focus:bg-muted focus:text-foreground focus:outline-none"

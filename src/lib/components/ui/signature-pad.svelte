@@ -2,7 +2,7 @@
     import { onMount, onDestroy } from 'svelte';
     import { browser } from '$app/environment';
 
-    let { width = 400, height = 200, strokeColor = '#000000', strokeWidth = 2, backgroundColor = '#ffffff', placeholder = 'Sign here' } = $props();
+    let { width = 400, height = 200, strokeColor = '#000000', strokeWidth = 2, backgroundColor = '#ffffff', placeholder = 'Sign here', onChange } = $props();
 
     let canvas: HTMLCanvasElement;
     let ctx: CanvasRenderingContext2D | null = null;
@@ -74,6 +74,7 @@
 
     function stopDrawing(): void {
         isDrawing = false;
+        if (hasSignature) onChange?.(getSignatureData());
     }
 
     onMount(() => {
