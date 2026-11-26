@@ -1,0 +1,24 @@
+<template>
+  <view style="padding: 24rpx">
+    <view style="display: flex; gap: 16rpx; flex-wrap: wrap">
+      <alu-button @click="noop">Default</alu-button>
+      <alu-button variant="outline" @click="noop">Outline</alu-button>
+      <alu-button variant="destructive" @click="noop">删除</alu-button>
+    </view>
+    <view style="margin-top: 24rpx">
+      <alu-card>
+        <view style="padding: 24rpx">运单 SH-001 · UPS · 已签收</view>
+      </alu-card>
+    </view>
+  </view>
+</template>
+
+<script>
+export default {
+  methods: {
+    noop() {},
+  },
+};
+</script>
+
+<!-- uniapp-x 实例化测试 — 把 components/*.vue 拷入工程 components/，pages.json 注册 alu-* 组件 -->

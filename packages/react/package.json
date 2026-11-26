@@ -1,0 +1,33 @@
+{
+  "name": "@alaikis/alaidesign-react",
+  "version": "0.3.0",
+  "description": "AlaiDesign React wrapper (Web Components)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@alaikis/alaidesign-ui": "^0.3.0"
+  }
+}

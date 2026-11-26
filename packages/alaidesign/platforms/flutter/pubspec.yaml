@@ -1,0 +1,13 @@
+name: alaikis_alaidesign
+description: AlaiDesign Flutter 组件库（高能量设计体系，与 Web/Swift/RN 同源 token）
+version: 0.3.0
+publish_to: pub.dev
+homepage: https://adesgin.alaikis.com
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter

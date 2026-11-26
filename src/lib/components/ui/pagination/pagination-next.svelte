@@ -15,6 +15,6 @@
 	class={cn("pr-1.5!", className)}
 	{...restProps}
 >
-	<span class="cn-pagination-next-text hidden sm:block">Next</span>
+	<span class="hidden sm:block">Next</span>
 	<ChevronRightIcon data-icon="inline-end" />
 </PaginationLink>

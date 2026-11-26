@@ -1,4 +1,4 @@
-name: Publish @alaikis/alaidesign
+name: Publish @alaikis/alaidesign (workspaces)
 
 on:
   push:
@@ -31,9 +31,19 @@ jobs:
         run: npm ci --legacy-peer-deps || npm install --legacy-peer-deps
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          npm run build --workspace=@alaikis/alaidesign-ui
+          npm run build --workspace=@alaikis/alaidesign-vue
+          npm run build --workspace=@alaikis/alaidesign-react
+          npm run build --workspace=@alaikis/alaidesign-multi
 
       - name: Publish to npmjs
-        run: npm publish --access public
+        run: |
+          npm publish --access public
+          npm publish --workspace=@alaikis/alaidesign-ui --access public
+          npm publish --workspace=@alaikis/alaidesign-vue --access public
+          npm publish --workspace=@alaikis/alaidesign-react --access public
+          npm publish --workspace=@alaikis/alaidesign-multi --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

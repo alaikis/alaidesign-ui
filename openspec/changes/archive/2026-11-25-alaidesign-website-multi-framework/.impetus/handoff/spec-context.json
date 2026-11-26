@@ -1,0 +1,14 @@
+{
+  "change": "alaidesign-website-multi-framework",
+  "phase": "design",
+  "mode": "beta",
+  "context_compression": "beta",
+  "canonical_spec": "openspec",
+  "generated_by": "impetus-handoff.sh",
+  "context_hash": "e28281ac7c785223dbeb910efacba74f6b32b6756becd41673afd5cc5bc86b83",
+  "files": [
+    { "path": "openspec/changes/alaidesign-website-multi-framework/proposal.md", "role": "proposal", "sha256": "bfb8d43f552f12395ba5c7afba0c786f682db5cb105f23b4c3194891e0950e99", "lines": 34 },
+    { "path": "openspec/changes/alaidesign-website-multi-framework/design.md", "role": "open-design-notes", "sha256": "b84b23974df072e37f742c627457b89d02c0f3dc073e90606b882f1fe6c98ea1", "lines": 67 },
+    { "path": "openspec/changes/alaidesign-website-multi-framework/tasks.md", "role": "tasks", "sha256": "281eea6e72f4d30dda2bd3c837c61e56e3c2208acc05c1b4b802e0e6097cdf22", "lines": 40 }
+  ]
+}

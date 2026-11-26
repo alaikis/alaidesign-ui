@@ -5,3 +5,8 @@ dist
 .DS_Store
 .vite
 .svelte
+
+# Flutter
+packages/alaidesign/platforms/flutter/.dart_tool/
+packages/alaidesign/platforms/flutter/pubspec.lock
+packages/alaidesign/platforms/flutter/.packages

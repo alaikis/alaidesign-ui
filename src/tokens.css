@@ -1,12 +1,12 @@
 /*
-  AlaiDesign — TDesign 高能量设计 token
-  - 中性骨架：TDesign brand #0052D9 + layered neutral grays + 1px hairline + 8px 节奏
+  AlaiDesign — 高能量设计 token
+  - 中性骨架：品牌蓝 #0052D9 + layered neutral grays + 1px hairline + 8px 节奏
   - 高能量强化（中性骨架 + 参数化加强）：CTA 对比 / 数据密度 / 视觉层级 / 状态变体派生
   - light（:root）+ dark（.dark）+ Svelte @theme inline 三处同步
 */
 
 :root {
-    /* TDesign light: page bg gray #F3F3F3, card surfaces white, layered neutrals */
+    /* Light: page bg gray #F3F3F3, card surfaces white, layered neutrals */
     --background: #F3F3F3;
     --background-secondary: #F7F7F7;
     --background-tertiary: #EFEFEF;
@@ -24,7 +24,7 @@
     --popover: #FFFFFF;
     --popover-foreground: #1F2329;
 
-    /* Primary = TDesign brand blue #0052D9 (buttons, links, focus) */
+    /* Primary = brand blue #0052D9 (buttons, links, focus) */
     --primary: #0052D9;
     --primary-foreground: #FFFFFF;
     --primary-light: #E8F1FF;
@@ -101,7 +101,7 @@
     --sidebar-collapse-width: 72px;
     --sidebar-uncollapse-width: 260px;
 
-    /* TDesign 几何：细边框优先、轻阴影、8px 间距节奏 */
+    /* 几何：细边框优先、轻阴影、8px 间距节奏 */
     --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
     --shadow-md: 0 1px 4px rgba(0, 0, 0, 0.05);
@@ -132,7 +132,7 @@
 }
 
 .dark {
-    /* TDesign dark: dark blue-gray page, elevated card surfaces, no pure black */
+    /* Dark: dark blue-gray page, elevated card surfaces, no pure black */
     --background: #0F1015;
     --background-secondary: #14161C;
     --background-tertiary: #1E2129;
@@ -150,7 +150,7 @@
     --popover: #14161C;
     --popover-foreground: #FFFFFF;
 
-    /* Primary = TDesign brand blue (dark keeps blue CTA, hover brightens) */
+    /* Primary = brand blue (dark keeps blue CTA, hover brightens) */
     --primary: #0052D9;
     --primary-foreground: #FFFFFF;
     --primary-light: #1E3557;
