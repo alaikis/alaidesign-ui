@@ -27,7 +27,7 @@
 	{count}
 	{perPage}
 	{siblingCount}
-	class={cn("cn-pagination mx-auto flex w-full justify-center", className)}
+	class={cn("mx-auto flex w-full justify-center", className)}
 	{...restProps}
 >
 	{#snippet children({ pages, currentPage })}
@@ -48,10 +48,9 @@
 							page={pItem}
 							aria-current={pItem.value === currentPage ? "page" : undefined}
 							data-active={pItem.value === currentPage}
-							class={cn(
-								buttonVariants({ size: "icon", variant: pItem.value === currentPage ? "outline" : "ghost" }),
-								"cn-pagination-link"
-							)}
+						class={cn(
+							buttonVariants({ size: "icon", variant: pItem.value === currentPage ? "outline" : "ghost" })
+						)}
 						>
 							{pItem.value}
 						</PaginationPrimitive.Page>
