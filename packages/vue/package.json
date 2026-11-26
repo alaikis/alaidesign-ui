@@ -1,6 +1,6 @@
 {
   "name": "@alaikis/alaidesign-vue",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "AlaiDesign Vue wrapper (Web Components)",
   "type": "module",
   "main": "./dist/index.js",
